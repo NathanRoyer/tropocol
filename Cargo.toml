@@ -1,0 +1,16 @@
+[package]
+name = "tropocol"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Nathan ROYER <nathan.royer.pro@gmail.com>" ]
+description = "Send and receive serde-compatible objects over TCP (async)"
+license = "MIT"
+keywords = [ "protocol", "serde", "tcp", "lan", "channels" ]
+repository = "https://github.com/NathanRoyer/tropocol"
+categories = [ "network-programming", "encoding" ]
+
+[dependencies]
+futures-lite = "2.6"
+async-net = "2.0"
+serde_json = "1.0"
+serde = "1.0"
