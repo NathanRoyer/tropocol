@@ -15,6 +15,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "async-fifo"
+version = "0.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e40eaad5f29cb25ae67604a1d44ba01e8d74509921ba72287b2bebbf0770748b"
+
+[[package]]
 name = "async-io"
 version = "2.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -350,8 +356,10 @@ checksum = "e672c95779cf947c5311f83787af4fa8fffd12fb27e4993211a84bdfd9610f9c"
 
 [[package]]
 name = "tropocol"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
+ "async-channel",
+ "async-fifo",
  "async-net",
  "futures-lite",
  "serde",

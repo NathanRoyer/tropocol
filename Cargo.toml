@@ -1,6 +1,6 @@
 [package]
 name = "tropocol"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = [ "Nathan ROYER <nathan.royer.pro@gmail.com>" ]
 description = "Send and receive serde-compatible objects over TCP (async)"
@@ -11,6 +11,14 @@ categories = [ "network-programming", "encoding" ]
 
 [dependencies]
 futures-lite = "2.6"
-async-net = "2.0"
-serde_json = "1.0"
-serde = "1.0"
+serde_json = "1"
+async-net = "2"
+serde = "1"
+
+async-fifo = { version = "0", optional = true }
+async-channel = { version = "2", optional = true }
+
+[features]
+default = [ "async-fifo" ]
+async-fifo = [ "dep:async-fifo" ]
+async-channel = [ "dep:async-channel" ]
